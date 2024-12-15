@@ -11,9 +11,12 @@ import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
-import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
-import clsx from "clsx";
+import "@/styles/navbar.css";
+
+import NavList from "./navlist";
+import NavGit from "./navgit";
+import NavWatch from "./navwatch";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
@@ -47,30 +50,29 @@ export const Navbar = () => {
   );
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar height="6rem" maxWidth="full" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+          <NextLink
+            className="flex justify-start items-center gap-1 LOGO-title"
+            href="/"
+          >
             <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+            <div>
+              <div className="LOGO-name" style={{ fontSize: "22px" }}>
+                <p className="font-bold text-inherit ">SAMRT</p>
+                <div>Beta</div>
+              </div>
+              <p
+                className="font-bold text-inherit"
+                style={{ fontSize: "14px" }}
+              >
+                SDV SMART CITY BIGDATA SYSTEM
+              </p>
+            </div>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
-                )}
-                color="foreground"
-                href={item.href}
-              >
-                {item.label}
-              </NextLink>
-            </NavbarItem>
-          ))}
-        </ul>
+        <NavList />
       </NavbarContent>
 
       <NavbarContent
@@ -78,12 +80,10 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
-          </Link>
           <ThemeSwitch />
+          <NavGit />
         </NavbarItem>
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+        {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
         <NavbarItem className="hidden md:flex">
           <Button
             isExternal
@@ -95,6 +95,9 @@ export const Navbar = () => {
           >
             赞助(临时项目)
           </Button>
+        </NavbarItem>
+        <NavbarItem className="hidden lg:flex">
+          <NavWatch />
         </NavbarItem>
       </NavbarContent>
 

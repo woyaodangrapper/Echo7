@@ -296,8 +296,9 @@ function enableSphereStyleEnhancements() {
   viewer.scene.highDynamicRange = true;
   viewer.scene.globe.baseColor = Color.fromCssColorString("#171744");
   viewer.scene.moon.show = false;
-  // viewer.scene.skyBox.show = false;
-  // viewer.scene.backgroundColor = Color.fromCssColorString('#171744');
+  viewer.scene.skyBox.show = false;
+  // viewer.scene.backgroundColor = Color.fromCssColorString("#171744");
+  // viewer.scene.backgroundColor = Color.TRANSPARENT;
 }
 
 export const Skymap: FC = () => {
@@ -305,11 +306,10 @@ export const Skymap: FC = () => {
 
   useEffect(() => {
     if (divRef.current) {
-      // 这里可以操作 div 元素
-      if (!viewer) create3D(divRef.current);
-      console.log("effect triggered");
+      viewer?.destroy();
+      create3D(divRef.current);
     }
   }, []);
 
-  return <div ref={divRef} className="skymap" />;
+  return <div ref={divRef} className="skymap fade-in" />;
 };

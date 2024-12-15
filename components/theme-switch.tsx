@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
 import { SwitchProps, useSwitch } from "@nextui-org/switch";
 import { useTheme } from "next-themes";
@@ -14,10 +14,17 @@ export interface ThemeSwitchProps {
   classNames?: SwitchProps["classNames"];
 }
 
+// setTheme(initialMode);
+
 export const ThemeSwitch: FC<ThemeSwitchProps> = ({
   className,
   classNames,
 }) => {
+  useEffect(() => {
+    const mediaQuery = matchMedia("(prefers-color-scheme: dark)");
+
+    setTheme(mediaQuery.matches ? "dark" : "light");
+  }, []);
   const { theme, setTheme } = useTheme();
   const isSSR = useIsSSR();
 

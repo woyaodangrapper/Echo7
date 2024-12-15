@@ -3,7 +3,7 @@ import * as React from "react";
 import { IconSvgProps } from "@/types";
 
 export const Logo: React.FC<IconSvgProps> = ({
-  size = 36,
+  size = 70,
   width,
   height,
   ...props
@@ -15,11 +15,174 @@ export const Logo: React.FC<IconSvgProps> = ({
     width={size || width}
     {...props}
   >
+    {
+      // <path
+      //   clipRule="evenodd"
+      //   d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
+      //   fill="currentColor"
+      //   fillRule="evenodd"
+      // />
+    }
+    <g>
+      <path
+        d="M8.69 15.5L14.77 9.41L16.48 11.12L10.4 17.2L8.69 15.5ZM18.29 9.32C18.81 8.81 19.5 8.52 20.23 8.52C20.96 8.52 21.65 8.81 22.17 9.32L22.65 9.8C23.16 10.32 23.45 11.02 23.45 11.74C23.45 12.47 23.16 13.16 22.65 13.68L20.86 15.5L22.56 17.22L24.38 15.4C25.34 14.43 25.89 13.11 25.89 11.74C25.89 10.37 25.34 9.06 24.38 8.09L23.89 7.61C22.92 6.64 21.61 6.09 20.24 6.09C18.87 6.09 17.55 6.64 16.58 7.61L16.49 7.7L18.2 9.42L18.29 9.32ZM14.68 21.67C14.17 22.18 13.47 22.47 12.74 22.47C12.02 22.47 11.32 22.18 10.81 21.67L10.32 21.19C9.81 20.67 9.52 19.97 9.52 19.25C9.52 18.52 9.81 17.83 10.32 17.31L10.42 17.21L8.69 15.5L8.6 15.59C7.63 16.56 7.09 17.88 7.09 19.25C7.09 20.62 7.63 21.93 8.6 22.9L9.08 23.38C10.05 24.35 11.37 24.9 12.74 24.9C14.11 24.9 15.42 24.35 16.39 23.38L16.49 23.29L14.77 21.57L14.68 21.67ZM16.49 19.87L20.86 15.5L22.57 17.21L18.2 21.58L16.49 19.87Z"
+        fill="currentColor"
+        fillOpacity="0.410000"
+        fillRule="evenodd"
+        id="Vector"
+      />
+      <path
+        d="M14.78 21.58L16.49 19.87L18.2 21.58L16.49 23.29L14.78 21.58ZM14.77 9.41L16.48 7.7L18.2 9.41L16.48 11.12L14.77 9.41Z"
+        fill="currentColor"
+        fillOpacity="1.000000"
+        fillRule="evenodd"
+        id="Vector"
+      />
+      <path
+        d="M14.43 15.4C14.43 15.95 14.65 16.47 15.03 16.86C15.42 17.24 15.94 17.46 16.49 17.46C17.03 17.46 17.56 17.24 17.94 16.86C18.33 16.47 18.54 15.95 18.54 15.4C18.54 14.86 18.33 14.33 17.94 13.95C17.56 13.56 17.03 13.34 16.49 13.34C15.94 13.34 15.42 13.56 15.03 13.95C14.65 14.33 14.43 14.86 14.43 15.4Z"
+        fill="currentColor"
+        fillOpacity="1.000000"
+        fillRule="evenodd"
+        id="Vector"
+      />
+    </g>
+    {/* <defs>
+      <filter
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+        height="34.260201"
+        id="filter_2_5_dd"
+        width="13.777512"
+        x="9.098343"
+        y="-1.130098"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
+        <feOffset dx="0" dy="0" />
+        <feGaussianBlur stdDeviation="1.33333" />
+        <feComposite in2="hardAlpha" k2="-1" k3="1" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.2902 0 0 0 0 0.95686 0 0 0 0 1 0 0 0 1 0"
+        />
+        <feBlend
+          in2="BackgroundImageFix"
+          mode="normal"
+          result="effect_dropShadow_1"
+        />
+        <feBlend
+          in="SourceGraphic"
+          in2="effect_dropShadow_1"
+          mode="normal"
+          result="shape"
+        />
+      </filter>
+      <filter
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+        height="14.933334"
+        id="filter_2_6_dd"
+        width="14.933334"
+        x="8.519180"
+        y="8.378345"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
+        <feOffset dx="0" dy="0" />
+        <feGaussianBlur stdDeviation="1.33333" />
+        <feComposite in2="hardAlpha" k2="-1" k3="1" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.10588 0 0 0 0 0.9451 0 0 0 0 1 0 0 0 1 0"
+        />
+        <feBlend
+          in2="BackgroundImageFix"
+          mode="normal"
+          result="effect_dropShadow_1"
+        />
+        <feBlend
+          in="SourceGraphic"
+          in2="effect_dropShadow_1"
+          mode="normal"
+          result="shape"
+        />
+      </filter>
+      <clipPath id="clip2_2">
+        <rect
+          fill="white"
+          fillOpacity="0"
+          height="32.000000"
+          id="Frame"
+          width="32.000000"
+        />
+      </clipPath>
+    </defs>
+    <rect
+      fill="#FFFFFF"
+      fillOpacity="0"
+      height="32.000000"
+      id="Frame"
+      width="32.000000"
+    />
+    <g clipPath="url(#clip2_2)">
+      <path
+        d="M2.86 16L13.09 5.75L15.98 8.63L5.73 18.86L2.86 16ZM19.02 5.6C19.89 4.73 21.06 4.25 22.29 4.25C23.51 4.25 24.68 4.73 25.55 5.6L26.36 6.41C27.23 7.28 27.71 8.45 27.71 9.67C27.71 10.9 27.23 12.07 26.36 12.94L23.34 16L26.2 18.9L29.27 15.83C30.9 14.2 31.81 11.99 31.81 9.68C31.81 7.37 30.9 5.16 29.27 3.52L28.45 2.71C26.82 1.08 24.61 0.16 22.3 0.16C19.99 0.16 17.78 1.08 16.14 2.71L15.98 2.87L18.87 5.76L19.02 5.6ZM12.94 26.4C12.07 27.26 10.9 27.74 9.68 27.74C8.45 27.74 7.28 27.26 6.41 26.4L5.6 25.58C4.73 24.71 4.25 23.54 4.25 22.32C4.25 21.09 4.73 19.92 5.6 19.05L5.76 18.89L2.86 16L2.69 16.16C1.06 17.79 0.15 20 0.15 22.31C0.15 24.62 1.06 26.83 2.69 28.47L3.51 29.28C5.14 30.91 7.36 31.83 9.66 31.83C11.97 31.83 14.18 30.91 15.82 29.28L15.98 29.12L13.09 26.23L12.94 26.4ZM15.98 23.36L23.34 16L26.22 18.88L18.86 26.24L15.98 23.36Z"
+        fill="#40DDFF"
+        fillOpacity="0.410000"
+        fillRule="evenodd"
+        id="Vector"
+      />
+      <g filter="url(#filter_2_5_dd)">
+        <path
+          d="M13.1 26.24L15.99 23.36L18.87 26.24L15.99 29.13L13.1 26.24ZM13.09 5.75L15.98 2.86L18.86 5.75L15.98 8.63L13.09 5.75Z"
+          fill="#0AF0FF"
+          fillOpacity="1.000000"
+          fillRule="evenodd"
+          id="Vector"
+        />
+      </g>
+      <g filter="url(#filter_2_6_dd)">
+        <path
+          d="M12.51 15.84C12.51 16.76 12.88 17.64 13.53 18.29C14.18 18.94 15.06 19.31 15.98 19.31C16.9 19.31 17.78 18.94 18.43 18.29C19.08 17.64 19.45 16.76 19.45 15.84C19.45 14.92 19.08 14.04 18.43 13.39C17.78 12.74 16.9 12.37 15.98 12.37C15.06 12.37 14.18 12.74 13.53 13.39C12.88 14.04 12.51 14.92 12.51 15.84Z"
+          fill="#0AF0FF"
+          fillOpacity="1.000000"
+          fillRule="evenodd"
+          id="Vector"
+        />
+      </g>
+    </g> */}
+  </svg>
+);
+
+export const MiscCircuit: React.FC<IconSvgProps> = ({
+  size = 37,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    fill="none"
+    height={size || height}
+    viewBox="0 0 37 37"
+    width={size || width}
+    {...props}
+  >
     <path
-      clipRule="evenodd"
-      d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-      fill="currentColor"
+      d="M33.53 2.31L3.46 2.31L2.31 3.46L2.31 33.53L3.46 34.68L33.53 34.68L34.68 33.53L34.68 3.46L33.53 2.31ZM32.37 32.37L11.56 32.37L11.56 27.75L16.88 27.75C17.57 29.13 19.19 30.06 20.81 30.06C23.35 30.06 25.43 27.98 25.43 25.43C25.43 22.89 23.35 20.81 20.81 20.81C18.26 20.81 16.18 22.89 16.18 25.43L9.25 25.43L9.25 32.37L4.62 32.37L4.62 4.62L9.25 4.62L9.25 9.94C7.86 10.63 6.93 12.25 6.93 13.87C6.93 16.41 9.01 18.5 11.56 18.5C14.1 18.5 16.18 16.41 16.18 13.87L20.81 13.87C20.81 16.41 22.89 18.5 25.43 18.5C27.98 18.5 30.06 16.41 30.06 13.87C30.06 11.33 27.98 9.25 25.43 9.25C23.81 9.25 22.2 10.17 21.5 11.56L15.49 11.56C14.8 10.17 13.18 9.25 11.56 9.25L11.56 4.62L32.37 4.62L32.37 32.37ZM18.5 25.43C18.5 24.05 19.42 23.12 20.81 23.12C22.2 23.12 23.12 24.05 23.12 25.43C23.12 26.82 22.2 27.75 20.81 27.75C19.42 27.75 18.5 26.82 18.5 25.43ZM11.56 11.56C12.95 11.56 13.87 12.48 13.87 13.87C13.87 15.26 12.95 16.18 11.56 16.18C10.17 16.18 9.25 15.26 9.25 13.87C9.25 12.48 10.17 11.56 11.56 11.56ZM25.43 11.56C26.82 11.56 27.75 12.48 27.75 13.87C27.75 15.26 26.82 16.18 25.43 16.18C24.05 16.18 23.12 15.26 23.12 13.87C23.12 12.48 24.05 11.56 25.43 11.56Z"
+      fill="#06F7A1"
+      fillOpacity="1.000000"
       fillRule="evenodd"
+      id="Vector"
     />
   </svg>
 );
@@ -89,6 +252,103 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
   );
 };
 
+export const CircleSmallIcon: React.FC<IconSvgProps> = ({}) => {
+  return (
+    <svg
+      className="svg-progress"
+      height="172"
+      viewBox="0 0 172 172"
+      width="172"
+    >
+      <circle
+        cx="86"
+        cy="86"
+        fill="none"
+        r="80"
+        stroke="#e6e6e600"
+        strokeWidth="12"
+      />
+      <circle
+        className="progress-circle progress-small"
+        cx="86"
+        cy="86"
+        fill="none"
+        r="80"
+        stroke="#fff"
+        strokeDasharray="502.65"
+        strokeDashoffset="502.65"
+        strokeLinecap="round"
+        strokeWidth="12"
+        style={{ strokeDashoffset: "-437.31" }}
+      />
+    </svg>
+  );
+};
+export const CircleBigIcon: React.FC<IconSvgProps> = ({}) => {
+  return (
+    <svg
+      className="svg-progress"
+      height="172"
+      viewBox="0 0 172 172"
+      width="172"
+    >
+      <circle
+        cx="86"
+        cy="86"
+        fill="none"
+        r="80"
+        stroke="#e6e6e600"
+        strokeWidth="12"
+      />
+      <circle
+        className="progress-circle progress-big"
+        cx="86"
+        cy="86"
+        fill="none"
+        r="80"
+        stroke="#06FFA5"
+        strokeDasharray="502.65"
+        strokeDashoffset="502.65"
+        strokeLinecap="round"
+        strokeWidth="12"
+        style={{ strokeDashoffset: "100.531" }}
+      />
+    </svg>
+  );
+};
+export const CircleMinIcon: React.FC<IconSvgProps> = ({}) => {
+  return (
+    <svg
+      className="svg-progress"
+      height="26"
+      id="min-botton-progress-vehicle"
+      viewBox="0 0 172 172"
+      width="26"
+    >
+      <circle
+        cx="86"
+        cy="86"
+        fill="none"
+        r="80"
+        stroke="#e6e6e600"
+        strokeWidth="12"
+      />
+      <circle
+        className="progress-circle progress-min"
+        cx="86"
+        cy="86"
+        fill="none"
+        r="80"
+        stroke="#fff"
+        strokeDasharray="502.65"
+        strokeDashoffset="502.65"
+        strokeLinecap="round"
+        strokeWidth="12"
+        style={{ strokeDashoffset: "100.531" }}
+      />
+    </svg>
+  );
+};
 export const MoonFilledIcon = ({
   size = 24,
   width,

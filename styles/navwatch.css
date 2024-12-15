@@ -1,0 +1,28 @@
+.watch {
+  height: auto;
+  width: 100%;
+
+
+  color: #ffffff;
+  font-family: "YouSheBiaoTiHei", Arial, sans-serif;
+}
+.watch .container {
+  width: auto;
+}
+.watch .data {
+  font-family: "DSDIGI", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+.watch .specific {
+  font-size: 14px;
+
+  
+  display: grid;
+  grid-template-columns: 0fr auto;
+  gap: 0.5rem;
+}
+.watch .specific p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0em;
+}

@@ -234,7 +234,30 @@ export const BIMLeft = () => {
           <div className="func-title">
             <div>情報リスト</div>
           </div>
+
           <div className="snap-box">
+            <div className="total-box">
+              <div className="icones-box">
+                <div className="info-label">
+                  <div>完成した</div>
+                </div>
+                <div className="info-value">6000</div>
+              </div>
+
+              <div className="icones-box">
+                <div className="info-label">
+                  <div>完成予定</div>
+                </div>
+                <div className="info-value">6000</div>
+              </div>
+
+              <div className="icones-box">
+                <div className="info-label">
+                  <div>元に戻す</div>
+                </div>
+                <div className="info-value">6000</div>
+              </div>
+            </div>
             <div className="snap-list normal" style={{ marginTop: 65 }}>
               <div className="info-label">
                 <div>コミュニティ</div>

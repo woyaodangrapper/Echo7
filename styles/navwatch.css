@@ -3,7 +3,8 @@
   width: 100%;
 
 
-  color: #ffffff;
+  /* color: #ffffff; */
+  color: inherit;
   font-family: "YouSheBiaoTiHei", Arial, sans-serif;
 }
 .watch .container {

@@ -22,7 +22,7 @@ import {
   WebGLContextOptions,
 } from "@/types/mapModel";
 
-let viewer: Viewer;
+export let viewer: Viewer;
 
 function create3D(container: Element) {
   //  simple passthrough of current href to CESIUM_BASE_URL
@@ -96,10 +96,9 @@ function create3D(container: Element) {
       webgl: webGlContextOptions,
     },
   });
-
   setupViewerOptions();
   hideCesiumElement();
-  setMouseStyle();
+  setMouseStyle(container);
   enableSphereStyleEnhancements();
 }
 
@@ -126,7 +125,7 @@ function hideCesiumElement() {
  * 设置鼠标样式
  * @returns {ScreenSpaceEventHandler} - 创建并返回一个ScreenSpaceEventHandler对象
  */
-function setMouseStyle() {
+function setMouseStyle(container: Element) {
   // 创建鼠标样式的DOM元素
   const mouseZoom = document.createElement("div");
   const zoomImg = document.createElement("div");
@@ -138,7 +137,7 @@ function setMouseStyle() {
   // 将zoomImg添加到mouseZoom中
   mouseZoom.appendChild(zoomImg);
   // 将mouseZoom添加到指定的容器中
-  // MapContainer.appendChild(mouseZoom);
+  container.appendChild(mouseZoom);
 
   // 创建ScreenSpaceEventHandler对象
   const screenSpaceEventHandler = new ScreenSpaceEventHandler(
@@ -294,11 +293,21 @@ function setupViewerOptions(options: SetupOptions = {}) {
  */
 function enableSphereStyleEnhancements() {
   viewer.scene.highDynamicRange = true;
-  viewer.scene.globe.baseColor = Color.fromCssColorString("#171744");
+  // viewer.scene.globe.baseColor = Color.fromCssColorString("#171744");
   viewer.scene.moon.show = false;
   viewer.scene.skyBox.show = false;
-  // viewer.scene.backgroundColor = Color.fromCssColorString("#171744");
-  // viewer.scene.backgroundColor = Color.TRANSPARENT;
+
+  viewer.scene.backgroundColor = Color.TRANSPARENT;
+  viewer.scene.sun.show = false;
+  viewer.scene.globe.enableLighting = false;
+  viewer.scene.skyAtmosphere.show = false;
+  viewer.scene.sun.show = false;
+
+  const mediaQuery = matchMedia("(prefers-color-scheme: dark)");
+
+  viewer.scene.globe.baseColor = Color.fromCssColorString(
+    mediaQuery ? "#000" : "#fff",
+  );
 }
 
 export const Skymap: FC = () => {

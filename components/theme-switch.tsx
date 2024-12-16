@@ -6,6 +6,9 @@ import { SwitchProps, useSwitch } from "@nextui-org/switch";
 import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
 import clsx from "clsx";
+import { Color } from "cesium";
+
+import { viewer } from "./maps/skymap";
 
 import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
 
@@ -30,6 +33,10 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
 
   const onChange = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
+
+    viewer.scene.globe.baseColor = Color.fromCssColorString(
+      theme === "light" ? "#000" : "#fff",
+    );
   };
 
   const {

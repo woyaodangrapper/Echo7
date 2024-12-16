@@ -50,9 +50,13 @@ export const Navbar = () => {
   );
 
   return (
-    <NextUINavbar height="6rem" maxWidth="full" position="sticky">
+    <NextUINavbar height="4rem" maxWidth="full" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
+        <NavbarBrand
+          as="li"
+          className="gap-3 max-w-fit"
+          style={{ paddingRight: "4rem" }}
+        >
           <NextLink
             className="flex justify-start items-center gap-1 LOGO-title"
             href="/"
@@ -60,7 +64,7 @@ export const Navbar = () => {
             <Logo />
             <div>
               <div className="LOGO-name" style={{ fontSize: "22px" }}>
-                <p className="font-bold text-inherit ">SAMRT</p>
+                <p className="font-bold text-inherit ">ECHO7</p>
                 <div>Beta</div>
               </div>
               <p
